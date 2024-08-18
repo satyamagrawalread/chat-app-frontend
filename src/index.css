@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  overflow: hidden;
+}
+
+
+
+@font-face {
+  font-family: "Font";
+  src: url("grow_font.woff2") format("woff2");
+}
+
+* {
+    font-family: "Font", sans-serif;
+  }

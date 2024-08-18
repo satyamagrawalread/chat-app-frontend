@@ -1,0 +1,1237 @@
+{
+    "data": [
+        {
+            "id": 37,
+            "attributes": {
+                "createdAt": "2024-08-18T15:57:49.739Z",
+                "text": "Who the hell are oyou",
+                "updatedAt": "2024-08-18T15:57:49.739Z",
+                "publishedAt": "2024-08-18T15:57:49.738Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 36,
+            "attributes": {
+                "createdAt": "2024-08-18T15:57:49.729Z",
+                "text": "Who the hell are oyou",
+                "updatedAt": "2024-08-18T15:57:49.729Z",
+                "publishedAt": "2024-08-18T15:57:49.727Z",
+                "sender": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 35,
+            "attributes": {
+                "createdAt": "2024-08-18T15:57:33.331Z",
+                "text": "All set!",
+                "updatedAt": "2024-08-18T15:57:33.331Z",
+                "publishedAt": "2024-08-18T15:57:33.325Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 34,
+            "attributes": {
+                "createdAt": "2024-08-18T15:57:33.311Z",
+                "text": "All set!",
+                "updatedAt": "2024-08-18T15:57:33.311Z",
+                "publishedAt": "2024-08-18T15:57:33.308Z",
+                "sender": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 33,
+            "attributes": {
+                "createdAt": "2024-08-18T15:54:30.323Z",
+                "text": "Who are you my ferere",
+                "updatedAt": "2024-08-18T15:54:30.323Z",
+                "publishedAt": "2024-08-18T15:54:30.321Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 32,
+            "attributes": {
+                "createdAt": "2024-08-18T15:54:30.317Z",
+                "text": "Who are you my ferere",
+                "updatedAt": "2024-08-18T15:54:30.317Z",
+                "publishedAt": "2024-08-18T15:54:30.314Z",
+                "sender": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 31,
+            "attributes": {
+                "createdAt": "2024-08-18T15:53:19.113Z",
+                "text": "Okay bfsdf",
+                "updatedAt": "2024-08-18T15:53:19.113Z",
+                "publishedAt": "2024-08-18T15:53:19.110Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 30,
+            "attributes": {
+                "createdAt": "2024-08-18T15:53:19.009Z",
+                "text": "Okay bfsdf",
+                "updatedAt": "2024-08-18T15:53:19.009Z",
+                "publishedAt": "2024-08-18T15:53:18.973Z",
+                "sender": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 29,
+            "attributes": {
+                "createdAt": "2024-08-18T15:49:42.579Z",
+                "text": "Okay boss",
+                "updatedAt": "2024-08-18T15:49:42.579Z",
+                "publishedAt": "2024-08-18T15:49:42.574Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 28,
+            "attributes": {
+                "createdAt": "2024-08-18T15:49:42.570Z",
+                "text": "Okay boss",
+                "updatedAt": "2024-08-18T15:49:42.570Z",
+                "publishedAt": "2024-08-18T15:49:42.567Z",
+                "sender": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 27,
+            "attributes": {
+                "createdAt": "2024-08-18T15:47:54.954Z",
+                "text": "Hfsdfsfe",
+                "updatedAt": "2024-08-18T15:47:54.954Z",
+                "publishedAt": "2024-08-18T15:47:54.950Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 26,
+            "attributes": {
+                "createdAt": "2024-08-18T15:47:54.936Z",
+                "text": "Hfsdfsfe",
+                "updatedAt": "2024-08-18T15:47:54.936Z",
+                "publishedAt": "2024-08-18T15:47:54.931Z",
+                "sender": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 25,
+            "attributes": {
+                "createdAt": "2024-08-18T15:46:46.959Z",
+                "text": "Hfsdfsfe",
+                "updatedAt": "2024-08-18T15:46:46.959Z",
+                "publishedAt": "2024-08-18T15:46:46.955Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 24,
+            "attributes": {
+                "createdAt": "2024-08-18T15:46:46.940Z",
+                "text": "Hfsdfsfe",
+                "updatedAt": "2024-08-18T15:46:46.940Z",
+                "publishedAt": "2024-08-18T15:46:46.933Z",
+                "sender": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 23,
+            "attributes": {
+                "createdAt": "2024-08-18T15:43:46.048Z",
+                "text": "Go to hell",
+                "updatedAt": "2024-08-18T15:43:46.048Z",
+                "publishedAt": "2024-08-18T15:43:46.038Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 22,
+            "attributes": {
+                "createdAt": "2024-08-18T15:43:46.023Z",
+                "text": "Go to hell",
+                "updatedAt": "2024-08-18T15:43:46.023Z",
+                "publishedAt": "2024-08-18T15:43:46.017Z",
+                "sender": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 21,
+            "attributes": {
+                "createdAt": "2024-08-18T15:42:31.410Z",
+                "text": "Hey Guchi",
+                "updatedAt": "2024-08-18T15:42:31.410Z",
+                "publishedAt": "2024-08-18T15:42:31.400Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 20,
+            "attributes": {
+                "createdAt": "2024-08-18T15:42:31.386Z",
+                "text": "Hey Guchi",
+                "updatedAt": "2024-08-18T15:42:31.386Z",
+                "publishedAt": "2024-08-18T15:42:31.382Z",
+                "sender": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 19,
+            "attributes": {
+                "createdAt": "2024-08-18T15:40:52.873Z",
+                "text": "Hey mario",
+                "updatedAt": "2024-08-18T15:40:52.873Z",
+                "publishedAt": "2024-08-18T15:40:52.862Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 18,
+            "attributes": {
+                "createdAt": "2024-08-18T15:40:52.838Z",
+                "text": "Hey mario",
+                "updatedAt": "2024-08-18T15:40:52.838Z",
+                "publishedAt": "2024-08-18T15:40:52.816Z",
+                "sender": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 17,
+            "attributes": {
+                "createdAt": "2024-08-18T15:32:41.745Z",
+                "text": "Hello Mfsfsf",
+                "updatedAt": "2024-08-18T15:32:41.745Z",
+                "publishedAt": "2024-08-18T15:32:41.716Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 16,
+            "attributes": {
+                "createdAt": "2024-08-18T15:32:41.686Z",
+                "text": "Hello Mfsfsf",
+                "updatedAt": "2024-08-18T15:32:41.686Z",
+                "publishedAt": "2024-08-18T15:32:41.677Z",
+                "sender": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 11,
+            "attributes": {
+                "createdAt": "2024-08-18T14:30:55.705Z",
+                "text": "Something is happening...",
+                "updatedAt": "2024-08-18T14:30:55.705Z",
+                "publishedAt": "2024-08-18T14:30:55.700Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 10,
+            "attributes": {
+                "createdAt": "2024-08-18T14:30:55.660Z",
+                "text": "Something is happening...",
+                "updatedAt": "2024-08-18T14:30:55.660Z",
+                "publishedAt": "2024-08-18T14:30:55.468Z",
+                "sender": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 9,
+            "attributes": {
+                "createdAt": "2024-08-18T14:24:24.237Z",
+                "text": "All the besttt",
+                "updatedAt": "2024-08-18T14:24:24.237Z",
+                "publishedAt": "2024-08-18T14:24:24.234Z",
+                "sender": {
+                    "data": {
+                        "id": 3,
+                        "attributes": {
+                            "username": "Server",
+                            "email": "server@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-14T19:21:12.833Z",
+                            "updatedAt": "2024-08-14T19:21:12.833Z"
+                        }
+                    }
+                },
+                "session": {
+                    "data": {
+                        "id": 6,
+                        "attributes": {
+                            "name": "Session3",
+                            "lastMessage": "I'm great",
+                            "createdAt": "2024-08-16T06:30:08.480Z",
+                            "updatedAt": "2024-08-16T21:49:29.959Z",
+                            "publishedAt": "2024-08-16T06:30:08.431Z"
+                        }
+                    }
+                },
+                "receiver": {
+                    "data": {
+                        "id": 5,
+                        "attributes": {
+                            "username": "Test4",
+                            "email": "test4@gmail.com",
+                            "provider": "local",
+                            "confirmed": true,
+                            "blocked": false,
+                            "createdAt": "2024-08-15T14:59:17.572Z",
+                            "updatedAt": "2024-08-15T14:59:17.572Z"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 2,
+            "total": 29
+        }
+    }
+}
