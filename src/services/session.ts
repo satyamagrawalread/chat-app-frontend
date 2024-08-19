@@ -16,7 +16,6 @@ export async function getSessionById(sessionId: number) {
 
 
 export async function getMySessions() {
-  console.log("getMySession")
   const token = getToken();
   const response = await fetch(`${API}/users/me?populate=*`, {
     method: "GET",
