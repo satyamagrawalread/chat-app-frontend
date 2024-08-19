@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { getMySessions, getSessionById } from "../../services/session";
+import { Session } from "../../types/session.types";
 
 export const useGetSessionDetailsById = ({
   sessionId,
@@ -57,7 +58,18 @@ export const useGetSessionDetailsById = ({
 };
 
 export const useGetAllSessionsForUser = () => {
-  return useQuery({
+  return useQuery<{
+    id: number;
+    username: string;
+    email: string;
+    provider: string;
+    confirmed: boolean;
+    blocked: boolean;
+    createdAt: string;
+    updatedAt: string;
+    sessions:
+      Session[] | [];
+  }>({
     queryKey: ["sessions"],
     queryFn: getMySessions,
     refetchOnWindowFocus: false,

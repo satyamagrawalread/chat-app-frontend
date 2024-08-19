@@ -11,14 +11,14 @@ interface ServerToClientEvents {
     clientMessage: (message: {userId: number, message: string, sessionId: number}) => void;
   }
   
-  interface InterServerEvents {
-    ping: () => void;
-  }
+  // interface InterServerEvents {
+  //   ping: () => void;
+  // }
   
-  interface SocketData {
-    name: string;
-    age: number;
-  }
+  // interface SocketData {
+  //   name: string;
+  //   age: number;
+  // }
 
 const initSocket = async (backend_url: string) => {
     const options: { [key: string]: any } = {

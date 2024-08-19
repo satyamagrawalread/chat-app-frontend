@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 const Home = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
-  const { user } = useAuthContext();
+  const { user, setUser } = useAuthContext();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,6 +24,7 @@ const Home = () => {
   }, [user])
 
   const handleLogout = () => {
+    setUser(undefined);
     removeToken();
     navigate("/signin", { replace: true });
   };

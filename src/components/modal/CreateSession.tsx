@@ -16,7 +16,6 @@ const CreateSession: FC<CreateSessionProps> = ({ setShowModal }) => {
         name: sessionName,
       };
       const token = getToken();
-      // console.log(token);
       if (token) {
         const response = await fetch(`${API}/sessions`, {
           method: "POST",

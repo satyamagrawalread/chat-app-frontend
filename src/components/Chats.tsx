@@ -1,5 +1,5 @@
 import { socket } from "../socket";
-import { message } from "antd";
+import { message, Skeleton } from "antd";
 import { useSearchParams } from "react-router-dom";
 import { cn } from "../utils/cn";
 import type { MenuProps } from "antd";
@@ -7,21 +7,28 @@ import { Button, Dropdown } from "antd";
 import { Session } from "../types/session.types";
 import ChatSession from "./chat/ChatSession";
 import { useGetAllSessionsForUser } from "../hooks/api-hooks/useSessionQuery";
-
+import { useEffect } from "react";
+import { useAuthContext } from "../context/AuthContext";
 
 const Chats = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const sessionsQuery = useGetAllSessionsForUser()
+  const sessionsQuery = useGetAllSessionsForUser();
   const sessionId = searchParams.get("sessionId");
+  const { user } = useAuthContext();
+  useEffect(() => {
+    socket.connect();
+    return () => {
+      socket.disconnect();
+    }
+  }, [user])
 
-
-  function handleErrors(e: any) {
-    console.log("Socket error", e);
-    message.error({
-      content: "Socket connection failed. Server is Starting, try again.",
-      duration: 3000,
-    });
-  }
+  // function handleErrors(e: any) {
+  //   console.log("Socket error", e);
+  //   message.error({
+  //     content: "Socket connection failed. Server is Starting, try again.",
+  //     duration: 3000,
+  //   });
+  // }
   const onSessionSelection = (session: Session) => {
     if (session.id) {
       searchParams.set("sessionId", `${session.id}`);
@@ -33,10 +40,17 @@ const Chats = () => {
   };
   const items: MenuProps["items"] =
     sessionsQuery.data &&
-    sessionsQuery.data["sessions"] &&
-    sessionsQuery.data["sessions"].map((session: Session, index: number) => {
+    sessionsQuery.data?.sessions?.length==0 ? [
+      {
+        key: 1,
+        label: (
+          <div>No session created</div>
+        )
+      }
+    ] :
+    sessionsQuery.data?.sessions.map((session: Session, index: number) => {
       return {
-        key: index.toString,
+        key: index,
         label: (
           <div
             key={session.id}
@@ -75,43 +89,16 @@ const Chats = () => {
                   </svg>
                 </Button>
               </Dropdown>
-              <div
-                id="menuDropdown"
-                className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg hidden"
-              >
-                <ul className="py-2 px-3 max-h-60 overflow-y-scroll flex flex-col gap-2">
-                  {sessionsQuery.data &&
-                    sessionsQuery.data["sessions"] &&
-                    sessionsQuery.data["sessions"].map((session: Session) => (
-                      <div
-                        key={session.id}
-                        onClick={() => onSessionSelection(session)}
-                        className={cn(
-                          "flex text-black items-center cursor-pointer hover:bg-neutral-200 p-2 rounded",
-                          Number(sessionId || -1) === session.id &&
-                            "bg-neutral-200"
-                        )}
-                      >
-                        <div className={cn("flex-1")}>
-                          <h2 className="text-sm font-semibold">
-                            {session.name}
-                          </h2>
-                          <p className="text-gray-600 text-xs">
-                            {session.lastMessage}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                </ul>
-              </div>
             </div>
           </header>
 
           <div className="overflow-y-auto h-screen p-3 mb-9 pb-20 hidden md:flex flex-col gap-1 ">
-            {sessionsQuery.isLoading && <p>Loading Sessions...</p>}
-            {sessionsQuery.data &&
-              sessionsQuery.data["sessions"] &&
-              sessionsQuery.data["sessions"].map((session: Session) => (
+            {sessionsQuery.isLoading ? (
+                <Skeleton />
+            ) : (
+              sessionsQuery.data &&
+              sessionsQuery.data?.sessions &&
+              sessionsQuery.data?.sessions.map((session: Session) => (
                 <div
                   key={session.id}
                   onClick={() => onSessionSelection(session)}
@@ -128,7 +115,8 @@ const Chats = () => {
                     </p>
                   </div>
                 </div>
-              ))}
+              ))
+            )}
           </div>
         </div>
         <ChatSession sessionId={sessionId || ""} />
