@@ -67,8 +67,8 @@ export const useGetAllSessionsForUser = () => {
     blocked: boolean;
     createdAt: string;
     updatedAt: string;
-    sessions:
-      Session[] | [];
+    sessions?:
+      Session[];
   }>({
     queryKey: ["sessions"],
     queryFn: getMySessions,

@@ -1,5 +1,6 @@
 import { io, Socket } from "socket.io-client";
 import { URL } from "./constant";
+import { getToken } from "./helpers";
 
 interface ServerToClientEvents {
     welcome: (response: {user: string, text: string}) => void;
@@ -25,7 +26,10 @@ const initSocket = async (backend_url: string) => {
         'force new connection': true,
         'reconnectionAttempt': 'Infinity',
         'timeout': 10000,
-        'transports': ['websocket']
+        'transports': ['websocket'],
+          query: {
+            token: getToken()
+          }
     }
 
     return io(backend_url, options);

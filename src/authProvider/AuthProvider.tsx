@@ -6,6 +6,7 @@ import { message } from "antd";
 import { API, BEARER } from "../constant";
 import { useEffect } from "react";
 import { getToken } from "../helpers";
+import { socket } from "../socket";
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -42,6 +43,7 @@ const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
   useEffect(() => {
     if (authToken) {
       fetchLoggedInUser(authToken);
+      socket.io.opts.query = {token: authToken};
     }
   }, [authToken]);
 

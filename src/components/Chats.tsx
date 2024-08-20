@@ -48,7 +48,7 @@ const Chats = () => {
         )
       }
     ] :
-    sessionsQuery.data?.sessions.map((session: Session, index: number) => {
+    sessionsQuery.data?.sessions?.map((session: Session, index: number) => {
       return {
         key: index,
         label: (

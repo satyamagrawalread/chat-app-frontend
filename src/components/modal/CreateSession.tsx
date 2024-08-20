@@ -2,11 +2,13 @@ import { Button, Divider, message } from "antd";
 import React, { FC, useState } from "react";
 import { API } from "../../constant";
 import { getToken } from "../../helpers";
+import { useQueryClient } from "@tanstack/react-query";
 
 interface CreateSessionProps {
   setShowModal: (show: boolean) => void;
 }
 const CreateSession: FC<CreateSessionProps> = ({ setShowModal }) => {
+  const queryClient = useQueryClient();
   const [sessionName, setSessionName] = useState<string>("");
   const [error, setError] = useState<string>("");
 
@@ -32,6 +34,9 @@ const CreateSession: FC<CreateSessionProps> = ({ setShowModal }) => {
             throw result.error;
         }
         else {
+          queryClient.refetchQueries({
+            queryKey: ['sessions']
+          })
             message.success(`Created Session: ${result.name}!`)
             setShowModal(false);
         }
