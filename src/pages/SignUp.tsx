@@ -5,6 +5,8 @@ import { useAuthContext } from "../context/AuthContext";
 import { API } from "../constant";
 import { setToken } from "../helpers";
 import { message } from "antd";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
 
 type UserInputs = {
   username: string;
@@ -14,6 +16,11 @@ type UserInputs = {
 };
 
 const SignUp = () => {
+  const [viewPassword, setViewPassword] = useState<boolean>(false);
+  const [viewConfirmPassword, setViewConfirmPassword] =
+    useState<boolean>(false);
+  const [error, setError] = useState<string>("");
+
   const navigate = useNavigate();
 
   const { setUser } = useAuthContext();
@@ -35,9 +42,9 @@ const SignUp = () => {
       const value = {
         username: data.username,
         email: data.email,
-        password: data.password
-      }
-    //   console.log(data.email);
+        password: data.password,
+      };
+      //   console.log(data.email);
       const response = await fetch(`${API}/auth/local/register`, {
         method: "POST",
         headers: {
@@ -48,6 +55,7 @@ const SignUp = () => {
 
       const result = await response.json();
       if (result?.error) {
+        setError(result.error?.message);
         throw result?.error;
       } else {
         // set the token
@@ -67,11 +75,11 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+      <div className="flex h-screen overflow-y-auto flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             alt="Your Company"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+            src="/chat.png"
             className="mx-auto h-10 w-auto"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
@@ -80,6 +88,9 @@ const SignUp = () => {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          {error && (
+            <div className="text-red-600 flex justify-center">{error}</div>
+          )}
           <form
             action="handle"
             onSubmit={handleSubmit(onSubmit)}
@@ -147,22 +158,30 @@ const SignUp = () => {
                 </label>
               </div>
               <div className="mt-2">
-                <input
-                  {...register("password", {
-                    required: "Password is required",
-                    pattern: {
-                      value: /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$/,
-                      message:
-                        "Password must be at least 6 characters long, contain 1 uppercase letter, 1 number, and 1 symbol",
-                    },
-                  })}
-                  //   id="password"
-                  //   name="password"
-                  type="password"
-                  //   required
-                  //   autoComplete="new-password"
-                  className="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
+                <div className="relative">
+                  <input
+                    {...register("password", {
+                      required: "Password is required",
+                      pattern: {
+                        value: /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$/,
+                        message:
+                          "Password must be at least 6 characters long, contain 1 uppercase letter, 1 number, and 1 symbol",
+                      },
+                    })}
+                    //   id="password"
+                    //   name="password"
+                    type={viewPassword ? "text" : "password"}
+                    //   required
+                    //   autoComplete="new-password"
+                    className="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                  <span
+                    className="absolute right-3 top-2 cursor-pointer"
+                    onClick={() => setViewPassword(!viewPassword)}
+                  >
+                    {viewPassword ? <FaEyeSlash /> : <FaEye />}
+                  </span>
+                </div>
                 {errors.password && (
                   <p className="text-red-600" role="alert">
                     {errors.password.message}
@@ -180,20 +199,28 @@ const SignUp = () => {
                 </label>
               </div>
               <div className="mt-2">
-                <input
-                  {...register("cpassword", {
-                    required: "Confirm password is required",
-                    validate: (value) =>
-                      value === getValues("password") ||
-                      "Passwords do not match",
-                  })}
-                  //   id="c-password"
-                  //   name="cpassword"
-                  type="password"
-                  //   required
-                  //   autoComplete="confirm-password"
-                  className="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
+                <div className="relative">
+                  <input
+                    {...register("cpassword", {
+                      required: "Confirm password is required",
+                      validate: (value) =>
+                        value === getValues("password") ||
+                        "Passwords do not match",
+                    })}
+                    //   id="c-password"
+                    //   name="cpassword"
+                    type={viewConfirmPassword ? "text" : "password"}
+                    //   required
+                    //   autoComplete="confirm-password"
+                    className="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                  <span
+                    className="absolute right-3 top-2 cursor-pointer"
+                    onClick={() => setViewConfirmPassword(!viewConfirmPassword)}
+                  >
+                    {viewConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+                  </span>
+                </div>
                 {errors.cpassword && (
                   <p className="text-red-600" role="alert">
                     {errors.cpassword.message}
@@ -217,6 +244,7 @@ const SignUp = () => {
             <Link
               className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
               to="/signin"
+              replace={true}
             >
               Sign In
             </Link>

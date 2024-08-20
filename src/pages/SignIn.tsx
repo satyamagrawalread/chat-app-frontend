@@ -1,4 +1,3 @@
-
 import { message } from "antd";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -7,18 +6,19 @@ import { useAuthContext } from "../context/AuthContext";
 import { API } from "../constant";
 import { setToken } from "../helpers";
 import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 type UserInputs = {
-    email: string;
-    password: string;
+  email: string;
+  password: string;
 };
 
 const SignIn = () => {
-    const [error, setError] = useState<string>('');
-    const navigate = useNavigate();
+  const [viewPassword, setViewPassword] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
+  const navigate = useNavigate();
 
   const { setUser } = useAuthContext();
-  
 
   const {
     register,
@@ -28,7 +28,7 @@ const SignIn = () => {
 
   const onSubmit: SubmitHandler<UserInputs> = async (data, event) => {
     event?.preventDefault();
-    setError('');
+    setError("");
     try {
       const userData = new FormData();
       userData.append("identifier", data.email);
@@ -36,8 +36,8 @@ const SignIn = () => {
 
       const value = {
         identifier: data.email,
-        password: data.password
-      }
+        password: data.password,
+      };
 
       const response = await fetch(`${API}/auth/local`, {
         method: "POST",
@@ -68,11 +68,11 @@ const SignIn = () => {
   };
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+      <div className="flex h-screen flex-1 flex-col justify-center px-6 py-12 overflow-y-auto lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             alt="Your Company"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+            src="/chat.png"
             className="mx-auto h-10 w-auto"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
@@ -81,7 +81,9 @@ const SignIn = () => {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            {error && <div className="text-red-600 flex justify-center">{error}</div>}
+          {error && (
+            <div className="text-red-600 flex justify-center">{error}</div>
+          )}
           <form
             action="handle"
             onSubmit={handleSubmit(onSubmit)}
@@ -101,7 +103,9 @@ const SignIn = () => {
                   //   id="email"
                   //   name="email"
                   type="email"
-                  onChange={() => {setError('')}}
+                  onChange={() => {
+                    setError("");
+                  }}
                   //   required
                   //   autoComplete="email"
                   className="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -123,7 +127,7 @@ const SignIn = () => {
                   Password
                 </label>
               </div>
-              <div className="mt-2">
+              <div className="mt-2 relative">
                 <input
                   {...register("password", {
                     required: "Password is required",
@@ -135,12 +139,20 @@ const SignIn = () => {
                   })}
                   //   id="password"
                   //   name="password"
-                  type="password"
-                  onChange={() => {setError('')}}
+                  type={viewPassword ? 'text' : 'password'}
+                  onChange={() => {
+                    setError("");
+                  }}
                   //   required
                   //   autoComplete="new-password"
                   className="block w-full rounded-md border-0 py-1.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
+                <span
+                  className="absolute right-3 top-2 cursor-pointer"
+                  onClick={() => setViewPassword(!viewPassword)}
+                >
+                  {viewPassword ? <FaEyeSlash /> : <FaEye />}
+                </span>
                 {errors.password && (
                   <p className="text-red-600" role="alert">
                     {errors.password.message}
@@ -148,6 +160,8 @@ const SignIn = () => {
                 )}
               </div>
             </div>
+            
+            
 
             <div>
               <button
@@ -161,7 +175,13 @@ const SignIn = () => {
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Not an account?{" "}
-            <Link className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500" to="/signup">Sign Up</Link>
+            <Link
+              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+              to="/signup"
+              replace={true}
+            >
+              Sign Up
+            </Link>
           </p>
         </div>
       </div>
