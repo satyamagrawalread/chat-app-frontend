@@ -1,12 +1,14 @@
 
     
-import React, { useState, ReactNode, FC } from "react";
+import { useState, ReactNode, FC, useRef } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { message } from "antd";
-import { API, BEARER } from "../constant";
+import { API, BEARER, URL } from "../constant";
 import { useEffect } from "react";
 import { getToken } from "../helpers";
-import { socket } from "../socket";
+// import { socket } from "../socket";
+import { ServerToClientEvents, ClientToServerEvents, initSocket } from "../socket";
+import { Socket } from "socket.io-client";
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -15,7 +17,7 @@ interface AuthProviderProps {
 const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
   const [userData, setUserData] = useState<any>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
-
+  const socket = useRef<Socket<ServerToClientEvents, ClientToServerEvents> | undefined>();
 
   const authToken: string | null = getToken();
 
@@ -41,15 +43,23 @@ const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
   };
 
   useEffect(() => {
-    if (authToken) {
-      fetchLoggedInUser(authToken);
-      socket.io.opts.query = {token: authToken};
+    const init = async() => {
+      
+      if (authToken) {
+        socket.current = await initSocket(URL);
+        fetchLoggedInUser(authToken);
+        socket.current.io.opts.query = {token: authToken};
+      }
+    }
+    init();
+    return () => {
+      socket.current?.close();
     }
   }, [authToken]);
 
   return (
     <AuthContext.Provider
-      value={{ user: userData, setUser: handleUser, isLoading }}
+      value={{ user: userData, setUser: handleUser, isLoading, socket: socket.current }}
     >
       {children}
     </AuthContext.Provider>

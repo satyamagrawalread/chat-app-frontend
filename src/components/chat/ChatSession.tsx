@@ -3,7 +3,7 @@ import { useAuthContext } from "../../context/AuthContext";
 import { useGetSessionDetailsById } from "../../hooks/api-hooks/useSessionQuery";
 import { useGetMessagesBySessionId } from "../../hooks/api-hooks/useMessageQuery";
 import { Message } from "../../types/message.types";
-import { socket } from "../../socket";
+// import { socket } from "../../socket";
 import Messages from "./Message";
 import { Skeleton } from 'antd';
 import { cn } from "../../utils/cn";
@@ -12,7 +12,7 @@ import { cn } from "../../utils/cn";
 const ChatSession = ({ sessionId }: { sessionId: string }) => {
   const [sendText, setSendText] = useState<string>("");
   const [ sendTextRows, setSendTextRows ] = useState<number>(1);
-  const { user } = useAuthContext();
+  const { user, socket } = useAuthContext();
   const { data: sessionData, isLoading } = useGetSessionDetailsById({
     sessionId: sessionId || "",
   });
@@ -33,13 +33,11 @@ const ChatSession = ({ sessionId }: { sessionId: string }) => {
       id,
       message,
       userId,
-      name,
       createdAt,
     }: {
       id: number;
       message: string;
       userId: number;
-      name: string;
       createdAt: string;
     }) => {
       if (message.trim()) {
@@ -57,10 +55,10 @@ const ChatSession = ({ sessionId }: { sessionId: string }) => {
         setNewMessages((prev) => [newMessage, ...prev]);
       }
     };
-    socket.on("serverMessage", handler);
+    socket?.on("serverMessage", handler);
 
     return () => {
-      socket.off("serverMessage", handler);
+      socket?.off("serverMessage", handler);
     };
   }, []);
 
@@ -81,7 +79,7 @@ const ChatSession = ({ sessionId }: { sessionId: string }) => {
         ...prev
       ]);
 
-      socket.emit("clientMessage", {
+      socket?.emit("clientMessage", {
         userId: Number(user.id),
         message: sendText,
         sessionId: Number(sessionId),

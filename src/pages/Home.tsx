@@ -22,7 +22,6 @@ const Home = () => {
         return () => clearTimeout(timer);
     }
   }, [user])
-
   const handleLogout = () => {
     setUser(undefined);
     removeToken();

@@ -1,5 +1,5 @@
-import { socket } from "../socket";
-import { message, Skeleton } from "antd";
+// import { socket } from "../socket";
+import { Skeleton } from "antd";
 import { useSearchParams } from "react-router-dom";
 import { cn } from "../utils/cn";
 import type { MenuProps } from "antd";
@@ -14,11 +14,11 @@ const Chats = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const sessionsQuery = useGetAllSessionsForUser();
   const sessionId = searchParams.get("sessionId");
-  const { user } = useAuthContext();
+  const { user, socket } = useAuthContext();
   useEffect(() => {
-    socket.connect();
+    socket?.connect();
     return () => {
-      socket.disconnect();
+      socket?.disconnect();
     }
   }, [user])
 
@@ -34,7 +34,7 @@ const Chats = () => {
       searchParams.set("sessionId", `${session.id}`);
       setSearchParams(searchParams);
     }
-    socket.emit("join", {
+    socket?.emit("join", {
       sessionId: session.id,
     });
   };

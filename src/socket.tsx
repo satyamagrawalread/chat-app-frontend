@@ -1,13 +1,13 @@
-import { io, Socket } from "socket.io-client";
-import { URL } from "./constant";
+import { io } from "socket.io-client";
+// import { URL } from "./constant";
 import { getToken } from "./helpers";
 
-interface ServerToClientEvents {
+export interface ServerToClientEvents {
     welcome: (response: {user: string, text: string}) => void;
     serverMessage: (response: {id: number, message: string, userId: number, name: string, createdAt: string}) => void;
   }
   
-  interface ClientToServerEvents {
+export interface ClientToServerEvents {
     join: (session: {sessionId: number}) => void;
     clientMessage: (message: {userId: number, message: string, sessionId: number}) => void;
   }
@@ -21,7 +21,7 @@ interface ServerToClientEvents {
   //   age: number;
   // }
 
-const initSocket = async (backend_url: string) => {
+export const initSocket = async (backend_url: string) => {
     const options: { [key: string]: any } = {
         'force new connection': true,
         'reconnectionAttempt': 'Infinity',
@@ -35,4 +35,4 @@ const initSocket = async (backend_url: string) => {
     return io(backend_url, options);
 }
 
-export const socket: Socket<ServerToClientEvents, ClientToServerEvents> = await initSocket(URL)
+// export const socket: Socket<ServerToClientEvents, ClientToServerEvents> = await initSocket(URL);
