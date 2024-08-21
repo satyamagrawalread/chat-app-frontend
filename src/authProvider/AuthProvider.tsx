@@ -10,6 +10,7 @@ import { getToken } from "../helpers";
 import { ServerToClientEvents, ClientToServerEvents, initSocket } from "../socket";
 import { Socket } from "socket.io-client";
 
+
 interface AuthProviderProps {
   children: ReactNode;
 }
