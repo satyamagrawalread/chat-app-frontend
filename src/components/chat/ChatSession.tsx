@@ -135,7 +135,7 @@ const ChatSession = ({ sessionId }: { sessionId: string }) => {
 
       <div className="overflow-y-auto p-4 flex flex-1 gap-4 flex-col-reverse text-base">
         {sessionId ? <Messages messages={totalMessages} userId={user.id} /> 
-        : <div className=" h-full flex justify-center">Welcome to your chats</div>}
+        : <div className="flex-1 flex justify-center">Welcome to your chats</div>}
       </div>
 
       {sessionId && <footer className="bg-white border-t border-gray-300 p-4 bottom-0 w-full">
@@ -146,7 +146,7 @@ const ChatSession = ({ sessionId }: { sessionId: string }) => {
             onChange={(e) => setSendText(e.target.value)}
             onKeyDown={handleKeyPress}
             rows={1}
-            className="w-full p-2 rounded border border-gray-400 focus:outline-none focus:border-blue-500"
+            className="flex-1 p-2 rounded border border-gray-400 focus:outline-none focus:border-blue-500"
           />
           <button
             onClick={handleSendMessage}
