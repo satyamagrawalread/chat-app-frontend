@@ -19,6 +19,11 @@ npm install
 npm run dev
 ```
 
+### Hosted Website:
+```
+https://chat-app-two-psi-45.vercel.app/
+```
+
 
 
 
