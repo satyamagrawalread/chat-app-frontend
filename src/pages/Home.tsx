@@ -25,7 +25,7 @@ const Home = () => {
   const handleLogout = () => {
     setUser(undefined);
     removeToken();
-    navigate("/signin");
+    navigate("/signin", {replace: true});
   };
 
   if (loading) {
