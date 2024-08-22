@@ -1,6 +1,6 @@
 
 ## Chat Application
-An application which allows the authenticated user to chat with the server.
+An application which allows the authenticated user to create session/ go to a session if already exists and chat with the server.
 
 # Steps to start:
 - Setup Backend:
