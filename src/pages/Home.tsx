@@ -30,7 +30,7 @@ const Home = () => {
 
   if (loading) {
     return (
-      <div className="h-[calc(100dvh)] flex justify-center items-center">
+      <div className="h-svh flex justify-center items-center">
         <Spin size="large" />
       </div>
     );
@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <div>
       {user ? (
-        <div className="w-screen h-screen flex flex-col">
+        <div className="w-screen h-svh flex flex-col">
           <div className="w-screen flex justify-between py-5 px-5 bg-gray-100 border-b border-gray-500">
             <span className="text-emerald-800 font-semibold">Username: {user.username}</span>
             <div className="flex justify-end gap-5">
@@ -59,7 +59,7 @@ const Home = () => {
           <Chats />
         </div>
       ) : (
-        <div className="w-screen h-screen flex justify-center items-center gap-5">
+        <div className="w-screen h-svh flex justify-center items-center gap-5">
           <Button
             type="primary"
             onClick={() => {
