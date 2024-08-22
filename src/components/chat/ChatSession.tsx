@@ -126,19 +126,19 @@ const ChatSession = ({ sessionId }: { sessionId: string }) => {
   }
 
   return (
-    <div className="flex-1">
+    <div className="flex flex-col flex-1">
       <header className={cn("bg-white py-2 px-4 text-gray-700", sessionId && "border-b")}>
         <h1 className="text-lg font-semibold">
           {sessionData?.data.attributes.name}
         </h1>
       </header>
 
-      <div className="h-screen overflow-y-auto p-4 pb-60 flex gap-4 flex-col-reverse text-base">
+      <div className="overflow-y-auto p-4 flex flex-1 gap-4 flex-col-reverse text-base">
         {sessionId ? <Messages messages={totalMessages} userId={user.id} /> 
         : <div className=" h-full flex justify-center">Welcome to your chats</div>}
       </div>
 
-      {sessionId && <footer className="bg-white border-t border-gray-300 p-4 absolute bottom-0 w-full md:w-3/4">
+      {sessionId && <footer className="bg-white border-t border-gray-300 p-4 bottom-0 w-full">
         <div className="flex items-center">
           <textarea
             placeholder="Type a message..."
