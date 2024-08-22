@@ -30,7 +30,7 @@ const Home = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center">
+      <div className="h-[calc(100dvh)] flex justify-center items-center">
         <Spin size="large" />
       </div>
     );
