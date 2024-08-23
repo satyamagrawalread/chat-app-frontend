@@ -42,6 +42,9 @@ const Chats = () => {
   }, [user]);
 
   useEffect(() => {
+    if(!sessionId) {
+      setSelectedSessionName('Create Session');
+    }
     sessionsQuery.data?.sessions && sessionsQuery.data.sessions?.length > 0 && sessionsQuery.data.sessions.some((session) => {
       if (session.id === Number(sessionId)) {
         setSelectedSessionName(session.name);
