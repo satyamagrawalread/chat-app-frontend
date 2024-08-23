@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useMemo, useState } from "react";
 import { useAuthContext } from "../../context/AuthContext";
 import { useGetSessionDetailsById } from "../../hooks/api-hooks/useSessionQuery";
 import { useGetMessagesBySessionId } from "../../hooks/api-hooks/useMessageQuery";
@@ -7,6 +7,7 @@ import { Message } from "../../types/message.types";
 import Messages from "./Message";
 import { Skeleton } from 'antd';
 import { cn } from "../../utils/cn";
+import { useQueryClient } from "@tanstack/react-query";
 
 
 const ChatSession = ({ sessionId }: { sessionId: string }) => {
@@ -23,12 +24,14 @@ const ChatSession = ({ sessionId }: { sessionId: string }) => {
     });
 
   const [newMessages, setNewMessages] = useState<Message[]>([]);
+  const queryClient = useQueryClient();
 
   useEffect(() => {
     setNewMessages([]);
   }, [sessionId]);
 
   useEffect(() => {
+    
     const handler = ({
       id,
       message,
@@ -53,6 +56,21 @@ const ChatSession = ({ sessionId }: { sessionId: string }) => {
           time: createdAt,
         };
         setNewMessages((prev) => [newMessage, ...prev]);
+        queryClient.setQueryData(["sessions"], (oldData: any) => {
+          if(!oldData) return oldData;
+          return {
+            ...oldData,
+            sessions: oldData.sessions.map((session: any) => {
+              if (session.id === Number(sessionId)) {
+                return {
+                  ...session,
+                  lastMessage: message
+                }
+              }
+              return session;
+            })
+          }
+        }) 
       }
     };
     socket?.on("serverMessage", handler);
@@ -61,7 +79,6 @@ const ChatSession = ({ sessionId }: { sessionId: string }) => {
       socket?.off("serverMessage", handler);
     };
   }, []);
-
   const handleSendMessage = () => {
     if (sendText.trim()) {
       setNewMessages((prev) => [
@@ -126,7 +143,7 @@ const ChatSession = ({ sessionId }: { sessionId: string }) => {
   }
 
   return (
-    <div className="flex flex-col flex-1">
+    <div className="md:w-3/4 flex flex-col flex-1">
       <header className={cn("bg-white py-2 px-4 text-gray-700", sessionId && "border-b")}>
         <h1 className="text-lg font-semibold">
           {sessionData?.data.attributes.name}

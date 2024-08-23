@@ -1,4 +1,4 @@
-import { message } from "antd";
+import { ConfigProvider, message, Spin } from "antd";
 import { FC, useState } from "react";
 import { API } from "../../constant";
 import { getToken } from "../../helpers";
@@ -11,6 +11,7 @@ const CreateSession: FC<CreateSessionProps> = ({ setShowModal }) => {
   const queryClient = useQueryClient();
   const [sessionName, setSessionName] = useState<string>("");
   const [error, setError] = useState<string>("");
+  const [isCreating, setIsCreating] = useState<boolean>(false);
 
   const handleCreate = async () => {
     try {
@@ -19,6 +20,7 @@ const CreateSession: FC<CreateSessionProps> = ({ setShowModal }) => {
       };
       const token = getToken();
       if (token) {
+        setIsCreating(true);
         const response = await fetch(`${API}/sessions`, {
           method: "POST",
           headers: {
@@ -29,16 +31,16 @@ const CreateSession: FC<CreateSessionProps> = ({ setShowModal }) => {
         });
 
         const result = await response.json();
-        if(result?.error) {
-            setError(result.error?.message);
-            throw result.error;
-        }
-        else {
+        if (result?.error) {
+          setError(result.error?.message);
+          throw result.error;
+        } else {
           queryClient.refetchQueries({
-            queryKey: ['sessions']
-          })
-            message.success(`Created Session: ${result.name}!`)
-            setShowModal(false);
+            queryKey: ["sessions"],
+          });
+          message.success(`Created Session: ${result.name}!`);
+          setIsCreating(false);
+          setShowModal(false);
         }
       }
     } catch (error) {
@@ -68,10 +70,10 @@ const CreateSession: FC<CreateSessionProps> = ({ setShowModal }) => {
                 required
                 value={sessionName}
                 onChange={(e) => {
-                    setSessionName(e.target.value)
-                    if(error) {
-                        setError("");
-                    }
+                  setSessionName(e.target.value);
+                  if (error) {
+                    setError("");
+                  }
                 }}
               />
               {error && <div className="text-red-600 text-xs ">{error}</div>}
@@ -86,10 +88,24 @@ const CreateSession: FC<CreateSessionProps> = ({ setShowModal }) => {
               </button>
               <button
                 disabled={!sessionName}
-                className=" bg-emerald-600 hover:bg-emerald-700 text-white text-sm px-4 py-2 rounded shadow hover:shadow-lg "
+                className="flex justify-between items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm px-4 py-2 rounded shadow hover:shadow-lg "
                 onClick={handleCreate}
               >
-                Create
+                {isCreating && <ConfigProvider
+                  theme={{
+                    token: {
+                      // Seed Token
+                      colorPrimary: "#ffffff",
+                      borderRadius: 2,
+
+                      // Alias Token
+                      colorBgContainer: "#f6ffed",
+                    },
+                  }}
+                >
+                  <Spin size="small"></Spin>
+                </ConfigProvider>}
+                <span>Create</span>
               </button>
             </div>
           </div>

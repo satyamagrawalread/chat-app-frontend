@@ -29,6 +29,10 @@ export const initSocket = async (backend_url: string) => {
         'transports': ['websocket'],
           query: {
             token: getToken()
+          },
+          connectionStateRecovery: {
+            maxDisconnectionDuration: 2 * 60 * 1000,
+            skipMiddlewares: true
           }
     }
 

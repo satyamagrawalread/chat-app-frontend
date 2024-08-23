@@ -4,31 +4,31 @@ import { useAuthContext } from "../context/AuthContext";
 import { removeToken } from "../helpers";
 import Chats from "../components/Chats";
 import CreateSession from "../components/modal/CreateSession";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 const Home = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(true);
-  const { user, setUser } = useAuthContext();
+  // const [loading, setLoading] = useState<boolean>(true);
+  const { user, setUser, isLoading } = useAuthContext();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if(user) {
-        setLoading(false);
-    }
-    else {
-        const timer = setTimeout(() => setLoading(false), 1000);
-        return () => clearTimeout(timer);
-    }
-  }, [user])
+  // useEffect(() => {
+  //   if(user) {
+  //       setLoading(false);
+  //   }
+  //   else {
+  //       const timer = setTimeout(() => setLoading(false), 1000);
+  //       return () => clearTimeout(timer);
+  //   }
+  // }, [user])
   const handleLogout = () => {
     setUser(undefined);
     removeToken();
     navigate("/signin", {replace: true});
   };
 
-  if (loading) {
+  if (isLoading) {
     return (
       <div className="h-svh flex justify-center items-center">
         <Spin size="large" />

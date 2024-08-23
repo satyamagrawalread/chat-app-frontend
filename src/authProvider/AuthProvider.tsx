@@ -17,7 +17,7 @@ interface AuthProviderProps {
 
 const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
   const [userData, setUserData] = useState<any>();
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const socket = useRef<Socket<ServerToClientEvents, ClientToServerEvents> | undefined>();
 
   const authToken: string | null = getToken();
@@ -51,10 +51,15 @@ const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
         fetchLoggedInUser(authToken);
         socket.current.io.opts.query = {token: authToken};
       }
+      else {
+        setIsLoading(false);
+      }
     }
     init();
     return () => {
-      socket.current?.close();
+      if (authToken) {
+        socket.current?.close();
+      }
     }
   }, [authToken]);
 

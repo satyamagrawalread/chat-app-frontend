@@ -103,6 +103,7 @@ const SignIn = () => {
                   //   id="email"
                   //   name="email"
                   type="email"
+                  autoComplete="off"
                   onChange={() => {
                     setError("");
                   }}
@@ -140,6 +141,7 @@ const SignIn = () => {
                   //   id="password"
                   //   name="password"
                   type={viewPassword ? 'text' : 'password'}
+                  autoComplete="off"
                   onChange={() => {
                     setError("");
                   }}
