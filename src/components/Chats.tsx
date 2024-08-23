@@ -35,9 +35,9 @@ const Chats = () => {
     });
     return () => {
       socket?.disconnect();
-      socket?.on("disconnect", () => {
-        // message.error('Server disconnected')
-      });
+      // socket?.on("disconnect", () => {
+      //   // message.error('Server disconnected')
+      // });
     };
   }, [user]);
 
