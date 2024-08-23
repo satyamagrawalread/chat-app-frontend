@@ -17,7 +17,7 @@ const Chats = () => {
   const sessionsQuery = useGetAllSessionsForUser();
   const sessionId = searchParams.get("sessionId");
   const { user, socket } = useAuthContext();
-  const [selectedSessionName, setSelectedSessionName] = useState<string>('');
+  const [selectedSessionName, setSelectedSessionName] = useState<string>('Select Session');
   useEffect(() => {
     socket?.connect();
     socket?.on("connect", () => {
@@ -114,7 +114,7 @@ const Chats = () => {
                 <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
               </svg>
             </Button> */}
-            <Button className="text-blue-600">{selectedSessionName ? selectedSessionName : 'Select Session'} <FaChevronDown /></Button>
+            <Button className="text-blue-600">{selectedSessionName} <FaChevronDown /></Button>
           </Dropdown>
         </div>
       </header>
