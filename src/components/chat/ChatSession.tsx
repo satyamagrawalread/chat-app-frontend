@@ -152,7 +152,7 @@ const ChatSession = ({ sessionId }: { sessionId: string }) => {
 
       <div className="overflow-y-auto p-4 flex flex-1 gap-4 flex-col-reverse text-base">
         {sessionId ? <Messages messages={totalMessages} userId={user.id} /> 
-        : <div className="flex-1 flex justify-center">Welcome to your chats</div>}
+        : <div className="flex-1 flex justify-center pt-3">Welcome to your chats</div>}
       </div>
 
       {sessionId && <footer className="bg-white border-t border-gray-300 p-4 bottom-0 w-full">
